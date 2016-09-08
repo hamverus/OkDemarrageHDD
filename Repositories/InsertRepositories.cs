@@ -330,6 +330,10 @@ namespace Repositories
                         v.na = b;
 
                     }
+                    if (dd == 141)
+                    {
+                        dd = 142;}
+                    
                     v.idDescription = dd;
                     dd++;//incrémentaion d'id
                     insertNum = repo.Insert(v);

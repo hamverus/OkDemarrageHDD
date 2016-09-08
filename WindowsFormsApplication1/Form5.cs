@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
         private void Form5_Load(object sender, EventArgs e)
         {
             displayList(dateStart, dateFinish, 1, "TQP");
-            displayList(dateStart, dateFinish, 8, "CE");
+            displayList(dateStart, dateFinish, 9, "CE");
         }
 
         private void displayList(DateTime dateStart, DateTime dateFinish, int test, String fonction)
