@@ -13,7 +13,7 @@ namespace Entities
     using System.Collections.Generic;
     
     public partial class ValOKdIntegrtion
-    {  
+    {    
         public int id { get; set; }
         public Nullable<System.DateTime> date { get; set; }
         public Nullable<bool> ok { get; set; }

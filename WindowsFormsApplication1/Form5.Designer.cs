@@ -1,4 +1,4 @@
-﻿namespace OKDemarrageIntegration
+﻿namespace WindowsFormsApplication1
 {
     partial class Form5
     {
@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listPiloteFini = new System.Windows.Forms.ListView();
+            this.matricule = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.fonction = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,12 +53,44 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.listPiloteFini);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 280);
+            this.panel1.Size = new System.Drawing.Size(845, 575);
             this.panel1.TabIndex = 0;
+            // 
+            // listPiloteFini
+            // 
+            this.listPiloteFini.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.matricule,
+            this.nom,
+            this.fonction});
+            this.listPiloteFini.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listPiloteFini.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listPiloteFini.Location = new System.Drawing.Point(0, 168);
+            this.listPiloteFini.Name = "listPiloteFini";
+            this.listPiloteFini.Size = new System.Drawing.Size(845, 407);
+            this.listPiloteFini.TabIndex = 2;
+            this.listPiloteFini.UseCompatibleStateImageBehavior = false;
+            this.listPiloteFini.View = System.Windows.Forms.View.Details;
+            // 
+            // matricule
+            // 
+            this.matricule.Text = "Matricule";
+            this.matricule.Width = 114;
+            // 
+            // nom
+            // 
+            this.nom.Text = "Nom";
+            this.nom.Width = 239;
+            // 
+            // fonction
+            // 
+            this.fonction.Text = "Fonction";
+            this.fonction.Width = 465;
             // 
             // tableLayoutPanel1
             // 
@@ -66,13 +102,15 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(67, 55);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(150, 0, 150, 0);
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 168);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(845, 168);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -80,9 +118,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(153, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 42);
+            this.label1.Size = new System.Drawing.Size(186, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login :";
             // 
@@ -90,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 42);
+            this.label2.Location = new System.Drawing.Point(153, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 18);
             this.label2.TabIndex = 1;
@@ -104,33 +142,33 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(137, 87);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(345, 87);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(239, 78);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 78);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(74, 26);
+            this.button1.Location = new System.Drawing.Point(107, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 25);
+            this.button1.Size = new System.Drawing.Size(132, 25);
             this.button1.TabIndex = 0;
             this.button1.Text = "Connecter";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.LoginHome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(137, 3);
+            this.panel2.Location = new System.Drawing.Point(345, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 36);
+            this.panel2.Size = new System.Drawing.Size(347, 36);
             this.panel2.TabIndex = 3;
             // 
             // LoginHome
@@ -138,16 +176,16 @@
             this.LoginHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginHome.Location = new System.Drawing.Point(0, 0);
             this.LoginHome.Name = "LoginHome";
-            this.LoginHome.Size = new System.Drawing.Size(239, 20);
+            this.LoginHome.Size = new System.Drawing.Size(347, 20);
             this.LoginHome.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.motdepasse);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(137, 45);
+            this.panel3.Location = new System.Drawing.Point(345, 45);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(239, 36);
+            this.panel3.Size = new System.Drawing.Size(347, 36);
             this.panel3.TabIndex = 4;
             // 
             // motdepasse
@@ -155,8 +193,10 @@
             this.motdepasse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.motdepasse.Location = new System.Drawing.Point(0, 0);
             this.motdepasse.Name = "motdepasse";
-            this.motdepasse.Size = new System.Drawing.Size(239, 20);
+            this.motdepasse.PromptChar = '*';
+            this.motdepasse.Size = new System.Drawing.Size(347, 20);
             this.motdepasse.TabIndex = 0;
+            this.motdepasse.UseSystemPasswordChar = true;
             // 
             // contextMenuStrip1
             // 
@@ -167,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 241);
+            this.ClientSize = new System.Drawing.Size(845, 575);
             this.Controls.Add(this.panel1);
             this.Name = "Form5";
             this.Text = "Form5";
@@ -197,5 +237,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.MaskedTextBox motdepasse;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ListView listPiloteFini;
+        private System.Windows.Forms.ColumnHeader matricule;
+        private System.Windows.Forms.ColumnHeader nom;
+        private System.Windows.Forms.ColumnHeader fonction;
     }
 }

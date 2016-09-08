@@ -13,7 +13,7 @@ namespace Entities
     using System.Collections.Generic;
     
     public partial class PiloteFini
-    {  
+    {    
         public string matricule { get; set; }
         public string nom { get; set; }
         public string poste { get; set; }
@@ -22,5 +22,8 @@ namespace Entities
         public Nullable<System.DateTime> date { get; set; }
         public Nullable<int> idLigne { get; set; }
         public int id { get; set; }
+    
+        public virtual Pilote Pilote { get; set; }
+        public virtual Pilote Pilote1 { get; set; }
     }
 }

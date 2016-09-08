@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Entities;
 using Repositories;
 
-namespace OKDemarrageIntegration
+namespace WindowsFormsApplication1
 {
     public partial class Form5 : Form
     {
@@ -30,11 +30,56 @@ namespace OKDemarrageIntegration
             pf = new PiloteFini();
             dateStart = insertRepositories.getDateEquipe();
             dateFinish = insertRepositories.getDateFINEquipe(dateStart);
-            
-        
-            private void button1_Click(object sender, EventArgs e)
-            {
+        }
 
+       
+        
+
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            displayList(dateStart, dateFinish, 1, "TQP");
+            displayList(dateStart, dateFinish, 8, "CE");
+        }
+
+        private void displayList(DateTime dateStart, DateTime dateFinish, int test, String fonction)
+        {
+            try
+            {
+                listPiloteFini.Items.Clear();
+
+                // Array data;
+                var data =
+                    pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish  )
+                        .Select(dt => new {dt.matricule, dt.nom, dt.poste})
+                        .Distinct()
+                        .ToList();
+                // Console.Write(data.GetValue(0).ToString());
+
+                var cont =
+                    pfi.Get(b => b.poste.Equals(fonction) && b.date >= dateStart && b.date <= dateFinish)
+                        .Select(c => c.module).Distinct().Count();
+
+                if (cont == test)
+                {
+                    foreach (var d in data)
+                    {
+                        var item = new ListViewItem();
+                        item.Text = d.matricule;
+                        item.SubItems.Add(d.nom);
+
+                        item.SubItems.Add(d.poste);
+                        listPiloteFini.Items.Add(item);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             var pilote = new PiloteRepositories(context);
             var validUser = false;
             var userElement =
@@ -67,49 +112,6 @@ namespace OKDemarrageIntegration
             {
                 MessageBox.Show("login ou mot de passe incorrecte !", "Login Failed", MessageBoxButtons.OK,
                     MessageBoxIcon.Stop);
-            }
-        }}
-
-        private void Form5_Load(object sender, EventArgs e)
-        {
-            displayList(dateStart, dateFinish, 3, "TQP");
-            displayList(dateStart, dateFinish, 17, "CE");
-        }
-
-        private void displayList(DateTime dateStart, DateTime dateFinish, int test, String fonction)
-        {
-            try
-            {
-                listPiloteFini.Items.Clear();
-
-                // Array data;
-                var data =
-                    pfi.Get(dt => dt.date >= dateStart && dt.date <= dateFinish)
-                        .Select(dt => new {dt.matricule, dt.nom, dt.module})
-                        .Distinct()
-                        .ToList();
-                // Console.Write(data.GetValue(0).ToString());
-
-                var cont =
-                    pfi.Get(b => b.poste.Equals(fonction) && b.date >= dateStart && b.date <= dateFinish)
-                        .Select(c => c.module)
-                        .Count();
-
-                if (cont == test)
-                {
-                    foreach (var d in data)
-                    {
-                        var item = new ListViewItem();
-                        item.Text = d.matricule;
-                        item.SubItems.Add(d.nom);
-
-                        item.SubItems.Add(d.module);
-                        listPiloteFini.Items.Add(item);
-                    }
-                }
-            }
-            catch (Exception)
-            {
             }
         }
     }

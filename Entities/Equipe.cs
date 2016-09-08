@@ -13,7 +13,7 @@ namespace Entities
     using System.Collections.Generic;
     
     public partial class Equipe
-    {  
+    {    
         public int id { get; set; }
         public string designation { get; set; }
         public Nullable<System.TimeSpan> dateDebut { get; set; }

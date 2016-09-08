@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Entities;
 using Repositories;
 
-namespace OKDemarrageIntegration
+namespace WindowsFormsApplication1
 {
     public partial class Form4 : Form
     {
@@ -78,7 +78,7 @@ namespace OKDemarrageIntegration
                 //v.idLigne = 5;
                 var pl = pil.Get(bb => bb.matricule.Equals(mat)).SingleOrDefault();
                 pilInsert.matricule = pl.matricule;
-                pilInsert.nom = pl.nom + "" + pl.prenom;
+                pilInsert.nom = pl.nom + " " + pl.prenom;
 
                 pilInsert.poste = pl.poste;
                 pilInsert.date = DateTime.Now;

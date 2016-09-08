@@ -11,6 +11,8 @@
         <EntityTypeShape EntityType="AQLM2Model.ValOKdIntegrtion" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="AQLM2Model.FK_ValOKdIntegrt_OKDesription" ManuallyRouted="false" />
         <EntityTypeShape EntityType="AQLM2Model.Equipe" Width="1.5" PointX="3.375" PointY="4.75" />
+        <AssociationConnector Association="AQLM2Model.FK_PiloteDispo_Pilote" />
+        <AssociationConnector Association="AQLM2Model.FK_PiloteDispo_PiloteInteg" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

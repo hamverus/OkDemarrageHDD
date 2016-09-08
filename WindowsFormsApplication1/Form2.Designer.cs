@@ -1,4 +1,4 @@
-﻿namespace OKDemarrageIntegration
+﻿namespace WindowsFormsApplication1
 {
     partial class Form1
     {
@@ -6664,6 +6664,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Production HDD Pôle ADT";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

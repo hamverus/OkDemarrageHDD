@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Repositories;
 
-namespace OKDemarrageIntegration
+namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {

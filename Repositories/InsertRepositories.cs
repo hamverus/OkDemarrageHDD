@@ -277,7 +277,7 @@ namespace Repositories
         {
             var pl = pil.Get(b => b.matricule.Equals(mat)).SingleOrDefault();
             pilInsert.matricule = pl.matricule;
-            pilInsert.nom = pl.nom+""+pl.prenom;
+            pilInsert.nom = pl.nom+" "+pl.prenom;
             pilInsert.poste = pl.poste;
             pilInsert.date = DateTime.Now;
             pilInsert.module = navigationpage;
@@ -342,7 +342,7 @@ namespace Repositories
                 }
                 else
                 {
-                    MessageBox.Show("S'il vous plait remplir les champs commentaire", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("S'il vous plait remplir les champs ci-dessus", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
